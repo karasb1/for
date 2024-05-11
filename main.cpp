@@ -1,21 +1,21 @@
 #include <iostream>
-#include <Windows.h>
 using namespace std;
 
 int main()
 {
-	int a = 0, b = 0, c = 0, k = 0, r = 0;
-	cin >> a;
-	int r = a;
-	cout r;
-	for (;r<10;r/10) {
-		k++;
-	}
-	k++;
-	cout << k;
+    int a = 0, result = 0, b = 1;
+    cout << "Enter your number: ";
+    cin >> a;
+    for (; a != 0; a /= 10)
+    {
+        int digit = a % 10;
+        if (digit != 3 && digit != 6)
+        {
+            result += digit * b;
+            b *= 10;
+        }
+    }
+    cout << result << endl;
 
-
-
-
-	return 0;
+    return 0;
 }
